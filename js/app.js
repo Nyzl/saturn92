@@ -15,7 +15,7 @@ let dvd = {
 (function main(){
     canvas = document.getElementById("tv-screen");
     ctx = canvas.getContext("2d");
-    dvd.img.src = 'dvd-logo.png';
+    dvd.img.src = 'images/dvd-logo.png';
 
     //Draw the "tv screen"
     canvas.width  = window.innerWidth;
