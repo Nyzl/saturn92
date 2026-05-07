@@ -59,11 +59,11 @@ function checkHitBox(){
 //Pick a random color in RGB format
 function pickColor(){
     const colours = [
-        "55,114,255", 
-        "240,56,255", 
-        "239,112,157", 
-        "226,239,112", 
-        "112,228,239"
+        "29,134,255",  // blue 
+        "240,56,255",  // fusia 
+        "137,252,0",   // lime
+        "250,255,0",   // yellow
+        "236,9,20"     // red
     ];
     const random = Math.floor(Math.random() * colours.length);
     logoColor = 'rgb('+colours[random]+')';
