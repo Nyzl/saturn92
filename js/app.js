@@ -7,8 +7,8 @@ let logoColor;
 let dvd = {
     x: 200,
     y: 300,
-    xspeed: 10,
-    yspeed: 10,
+    xspeed: 8,
+    yspeed: 8,
     img: new Image()
 };
 
@@ -63,7 +63,7 @@ function pickColor(){
         "240,56,255",  // fusia 
         "137,252,0",   // lime
         "250,255,0",   // yellow
-        "236,9,20"     // red
+        "255,133,33"   // red
     ];
     const random = Math.floor(Math.random() * colours.length);
     logoColor = 'rgb('+colours[random]+')';
