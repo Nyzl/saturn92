@@ -3,6 +3,7 @@ let scale = 0.17; // Image scale (I work on 1080p monitor)
 let canvas;
 let ctx;
 let logoColor;
+let thisColorIdx = -1;
 
 let dvd = {
     x: 200,
@@ -59,12 +60,20 @@ function checkHitBox(){
 //Pick a random color in RGB format
 function pickColor(){
     const colours = [
-        "29,134,255",  // blue 
-        "240,56,255",  // fusia 
-        "137,252,0",   // lime
-        "250,255,0",   // yellow
-        "255,133,33"   // red
+        "27,231,255",  // Electric Aqua
+        "240,56,255",  // Fusia
+        "137,252,0",   // Lime
+        "228,255,26",  // Neon Chartreuse
+        "252,47,0",    // Scarlet Fire
+        "255,87,20",   // Tiger Flame
+        "240,56,255",  // Magenta
+        "35,255,181",  // Tropical Mint
     ];
-    const random = Math.floor(Math.random() * colours.length);
+    // Pick a random colour that isn't the current one.
+    const random = Math.floor(Math.random() * (colours.length - 1));
+    if (random >= thisColorIdx) {
+        random += 1;
+    }
+    thisColorIdx = random;
     logoColor = 'rgb('+colours[random]+')';
 }
