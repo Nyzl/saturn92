@@ -70,7 +70,7 @@ function pickColor(){
         "35,255,181",  // Tropical Mint
     ];
     // Pick a random colour that isn't the current one.
-    const random = Math.floor(Math.random() * (colours.length - 1));
+    let random = Math.floor(Math.random() * (colours.length - 1));
     if (random >= thisColorIdx) {
         random += 1;
     }
